@@ -2,6 +2,14 @@
 let emailFieldsCount = 1;
 let phoneFieldsCount = 1;
 
+//count variables for education fields
+let educationLevelCount = 1;
+let institutionNameCount = 1;
+let institutionLocationCount = 1;
+let fromDateCount = 1;
+let toDateCount = 1;
+let degreeCount = 1;
+
 function handleSubmit() {
   const form = document.getElementById('Form');
   // Object containing all form data keyed by their "name" property
