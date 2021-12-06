@@ -205,7 +205,7 @@
                                 class="form-control"
                                 id="institutionCity"
                                 name="institutionCity"
-                                placeholder="Jacksonville, FL"
+                                placeholder="University of North Florida"
                                 minlength="2"
                                 maxlength="30"
                             >
@@ -217,9 +217,6 @@
                                 class="form-control"
                                 id="fromDate"
                                 name="fromDate"
-                                placeholder="Jacksonville, FL"
-                                minlength="2"
-                                maxlength="30"
                             >
                             <label for="fromDate">From</label>
                         </div>
@@ -229,9 +226,6 @@
                                 class="form-control"
                                 id="toDate"
                                 name="toDate"
-                                placeholder="Jacksonville, FL"
-                                minlength="2"
-                                maxlength="30"
                             >
                             <label for="fromDate">To</label>
                         </div>
@@ -421,6 +415,171 @@
                     </div>
                 </div>
                 <button type="button" class="btn btn-success mb-3" onclick="addWorkExperienceGroup()">Add Additional Work Experience</button>
+            </section>
+            <!-- Miscellaneous -->
+            <section id="Miscellaneous">
+                <h2>Miscellaneous</h2>
+                <div class="row g-2">
+                    <div class="col-sm-2 form-floating mb-3">
+                        <div>
+                            <b>Employment desired</b>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" vaue="fullTime">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Full-time
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="partTime">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              part-time
+                            </label>
+                          </div>
+                    </div>
+                    <div class="col-sm-2 form-floating mb-3">
+                        <div>
+                            <b>Days available to work</b>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="monday" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                              Monday
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="tuesday" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Tuesday
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="wednesday" id="flexCheckChecked">
+                            <label class="form-check-label" for="flexCheckChecked">
+                              Wednesday
+                            </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="thursday" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Thursday
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="friday" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Friday
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="saturday" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Saturday
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="sunday" id="flexCheckChecked">
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Sunday
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-3 form-floating mb-3">
+                    <div>
+                        <b>Are you able to work nights?</b>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" vaue="yes">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="no">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          No
+                        </label>
+                      </div>
+                </div>
+                <div class="col-sm-3 form-floating mb-3">
+                    <input
+                        type="number"
+                        class="form-control"
+                        id="workHours"
+                        name="workHours"
+                        placeholder="10"
+                        min="0"
+                    >
+                    <label for="workHours">Hours desired to work per week</label>
+                </div>
+                <div class="col-lg-2 form-floating mb-3">
+                    <input
+                        type="date"
+                        class="form-control"
+                        id="startDate"
+                        name="startDate"
+                        minlength="2"
+                        maxlength="30"
+                    >
+                    <label for="startDate">Date available to start</label>
+                </div>
+            </section>
+            <!-- Military Background -->
+            <section id="Military Experience">
+                <div class="row g-2">
+                    <h2>Military Background</h2>
+                    <div class="col-sm-3 form-floating mb-3">
+                        <div>
+                            <b>Have  you served in the military?</b>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" vaue="yes">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Yes
+                            </label>
+                        </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="no">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                No
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 form-floating mb-3">
+                        <div>
+                            <b>Are you currently enlisted as active duty or reserves?</b>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" vaue="yes">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Active duty
+                            </label>
+                        </div>
+                            <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="no">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Reserves
+                            </label>
+                        </div>
+                    </div>&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <div class="col-sm-3 form-floating mb-3">
+                        <div>
+                            <b>Years served</b>
+                        </div>
+                        <input
+                        type="number"
+                        class="form-control"
+                        name="yearsServed"
+                        min="0"
+                    >
+                    </div>
+                </div>
+                <div class="row g-2">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Please describe your military experience and/or duties...</label>
+                    </div>
+                </div>
             </section>
             <!-- Acknowledgement -->
             <section id="Acknowledgement">
