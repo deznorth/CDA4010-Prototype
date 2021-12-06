@@ -3,6 +3,7 @@ let emailFieldsCount = 1;
 let phoneFieldsCount = 1;
 let educationGroupsCount = 1;
 let referenceGroupsCount = 1;
+let workExperienceGroupsCount = 1;
 
 function handleSubmit() {
   const form = document.getElementById('Form');
@@ -357,4 +358,203 @@ function addReferenceGroup() {
   // Append the row to the container
   const educationContainer = document.getElementById('ReferencesContainer');
   educationContainer.appendChild(row);
+}
+
+function addWorkExperienceGroup() {
+  workExperienceGroupsCount++;
+
+  // Declare Input Names
+  const employerNameName = `employerName${workExperienceGroupsCount}`;
+  const supervisorNameName = `supervisorName${workExperienceGroupsCount}`;
+  const experiencePhoneNumberName = `experiencePhoneNumber${workExperienceGroupsCount}`;
+  const experienceTitleName = `experienceTitle${workExperienceGroupsCount}`;
+  const experienceStartDateName = `experienceStartDate${workExperienceGroupsCount}`;
+  const experienceEndDateName = `experienceEndDate${workExperienceGroupsCount}`;
+  const experienceDescriptionName = `experienceDescription${workExperienceGroupsCount}`;
+  const experienceContactAgreementName = `experienceContactAgreement${workExperienceGroupsCount}`;
+
+  // Create the group's row
+  const row = document.createElement('div');
+  row.className = 'row g-2 mb-4';
+
+  // Create the inputs row
+  const inputsRow = document.createElement('div');
+  inputsRow.className = 'row g-2';
+
+  // Create the textarea row
+  const textareaRow = document.createElement('div');
+  textareaRow.className = 'row g-2';
+
+  // Create the checkbox row
+  const checkboxRow = document.createElement('div');
+  checkboxRow.className = 'row g-2';
+
+  // Create the columns
+  const employerNameColumn = document.createElement('div');
+  employerNameColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const supervisorNameColumn = document.createElement('div');
+  supervisorNameColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const experiencePhoneNumberColumn = document.createElement('div');
+  experiencePhoneNumberColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const experienceTitleColumn = document.createElement('div');
+  experienceTitleColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const experienceStartDateColumn = document.createElement('div');
+  experienceStartDateColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const experienceEndDateColumn = document.createElement('div');
+  experienceEndDateColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const experienceDescriptionColumn = document.createElement('div');
+  experienceDescriptionColumn.className = 'col form-floating mb-3';
+
+  const experienceContactAgreementColumn = document.createElement('div');
+  experienceContactAgreementColumn.className = 'form-check';
+
+  // Create the inputs
+  const employerNameInput = document.createElement('input');
+  employerNameInput.type = 'text';
+  employerNameInput.name = employerNameName;
+  employerNameInput.id = employerNameName;
+  employerNameInput.placeholder = 'Advent';
+  employerNameInput.className = 'form-control';
+  employerNameInput.minLength = 2;
+  employerNameInput.maxLength = 30;
+
+  const supervisorNameInput = document.createElement('input');
+  supervisorNameInput.type = 'text';
+  supervisorNameInput.name = supervisorNameName;
+  supervisorNameInput.id = supervisorNameName;
+  supervisorNameInput.placeholder = 'Jimmy';
+  supervisorNameInput.className = 'form-control';
+  supervisorNameInput.minLength = 2;
+  supervisorNameInput.maxLength = 30;
+
+  const experiencePhoneNumberInput = document.createElement('input');
+  experiencePhoneNumberInput.type = 'tel';
+  experiencePhoneNumberInput.name = experiencePhoneNumberName;
+  experiencePhoneNumberInput.id = experiencePhoneNumberName;
+  experiencePhoneNumberInput.placeholder = '1231231234';
+  experiencePhoneNumberInput.className = 'form-control';
+
+  const experienceTitleInput = document.createElement('input');
+  experienceTitleInput.type = 'text';
+  experienceTitleInput.name = experienceTitleName;
+  experienceTitleInput.id = experienceTitleName;
+  experienceTitleInput.placeholder = 'Scientist';
+  experienceTitleInput.className = 'form-control';
+  experienceTitleInput.minLength = 2;
+  experienceTitleInput.maxLength = 30;
+
+  const experienceStartDateInput = document.createElement('input');
+  experienceStartDateInput.type = 'date';
+  experienceStartDateInput.name = experienceStartDateName;
+  experienceStartDateInput.id = experienceStartDateName;
+  experienceStartDateInput.placeholder = '4/20/2020';
+  experienceStartDateInput.className = 'form-control';
+
+  const experienceEndDateInput = document.createElement('input');
+  experienceEndDateInput.type = 'date';
+  experienceEndDateInput.name = experienceEndDateName;
+  experienceEndDateInput.id = experienceEndDateName;
+  experienceEndDateInput.placeholder = '4/20/2021';
+  experienceEndDateInput.className = 'form-control';
+
+  const experienceContactAgreementInput = document.createElement('input');
+  experienceContactAgreementInput.type = 'checkbox';
+  experienceContactAgreementInput.name = experienceContactAgreementName;
+  experienceContactAgreementInput.id = experienceContactAgreementName;
+  experienceContactAgreementInput.className = 'form-check-input';
+
+  // Create the textarea
+  const experienceDescriptionTextarea = document.createElement('textarea');
+  experienceDescriptionTextarea.name = experienceDescriptionName;
+  experienceDescriptionTextarea.id = experienceDescriptionName;
+  experienceDescriptionTextarea.placeholder = 'Experience Description';
+  experienceDescriptionTextarea.className = 'form-control';
+
+  // Create the labels
+  const employerNameLabel = document.createElement('label');
+  employerNameLabel.htmlFor = employerNameName;
+  employerNameLabel.textContent = `Employer Name ${workExperienceGroupsCount}`;
+
+  const supervisorNameLabel = document.createElement('label');
+  supervisorNameLabel.htmlFor = supervisorNameName;
+  supervisorNameLabel.textContent = `Supervisor Name ${workExperienceGroupsCount}`;
+
+  const experiencePhoneNumberLabel = document.createElement('label');
+  experiencePhoneNumberLabel.htmlFor = experiencePhoneNumberName;
+  experiencePhoneNumberLabel.textContent = `Phone Number ${workExperienceGroupsCount}`;
+
+  const experienceTitleLabel = document.createElement('label');
+  experienceTitleLabel.htmlFor = experienceTitleName;
+  experienceTitleLabel.textContent = `Last Job Title ${workExperienceGroupsCount}`;
+
+  const experienceStartDateLabel = document.createElement('label');
+  experienceStartDateLabel.htmlFor = experienceStartDateName;
+  experienceStartDateLabel.textContent = `Employment Start ${workExperienceGroupsCount}`;
+
+  const experienceEndDateLabel = document.createElement('label');
+  experienceEndDateLabel.htmlFor = experienceEndDateName;
+  experienceEndDateLabel.textContent = `Employment End ${workExperienceGroupsCount}`;
+
+  const experienceDescriptionLabel = document.createElement('label');
+  experienceDescriptionLabel.htmlFor = experienceDescriptionName;
+  experienceDescriptionLabel.textContent = `List duties performed, skills used, etc.`;
+
+  const experienceContactAgreementLabel = document.createElement('label');
+  experienceContactAgreementLabel.htmlFor = experienceContactAgreementName;
+  experienceContactAgreementLabel.textContent = `May we contact this employer?`;
+  experienceContactAgreementLabel.className = 'form-check-label';
+
+  // Append the inputs and labels to columns
+  employerNameColumn.appendChild(employerNameInput);
+  employerNameColumn.appendChild(employerNameLabel);
+
+  supervisorNameColumn.appendChild(supervisorNameInput);
+  supervisorNameColumn.appendChild(supervisorNameLabel);
+
+  experiencePhoneNumberColumn.appendChild(experiencePhoneNumberInput);
+  experiencePhoneNumberColumn.appendChild(experiencePhoneNumberLabel);
+
+  experienceStartDateColumn.appendChild(experienceStartDateInput);
+  experienceStartDateColumn.appendChild(experienceStartDateLabel);
+
+  experienceTitleColumn.appendChild(experienceTitleInput);
+  experienceTitleColumn.appendChild(experienceTitleLabel);
+
+  experienceEndDateColumn.appendChild(experienceEndDateInput);
+  experienceEndDateColumn.appendChild(experienceEndDateLabel);
+
+  experienceDescriptionColumn.appendChild(experienceDescriptionTextarea);
+  experienceDescriptionColumn.appendChild(experienceDescriptionLabel);
+
+  experienceContactAgreementColumn.appendChild(experienceContactAgreementInput);
+  experienceContactAgreementColumn.appendChild(experienceContactAgreementLabel);
+
+  // Append the columns to the row
+  inputsRow.appendChild(employerNameColumn);
+  inputsRow.appendChild(supervisorNameColumn);
+  inputsRow.appendChild(experiencePhoneNumberColumn);
+  inputsRow.appendChild(experienceTitleColumn);
+  inputsRow.appendChild(experienceStartDateColumn);
+  inputsRow.appendChild(experienceEndDateColumn);
+
+  // Append the column to the textarea row
+  textareaRow.appendChild(experienceDescriptionColumn);
+
+  // Append the column to the checkbox row
+  checkboxRow.appendChild(experienceContactAgreementColumn);
+
+  // Append the rows to the main row
+  row.appendChild(inputsRow);
+  row.appendChild(textareaRow);
+  row.appendChild(checkboxRow);
+
+  // Append the row to the container
+  const workExperiencesContainer = document.getElementById('WorkExperiencesContainer');
+  workExperiencesContainer.appendChild(row);
 }

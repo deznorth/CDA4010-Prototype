@@ -329,6 +329,98 @@
             <!-- Work Experience -->
             <section id="WorkExperience">
                 <h2>Work Experience</h2>
+                <div id="WorkExperiencesContainer">
+                    <div class="row g-2 mb-4">
+                        <div class="row g-2">
+                            <div class="col-lg-2 form-floating mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="employerName"
+                                    name="employerName"
+                                    placeholder="Advent"
+                                    minlength="2"
+                                    maxlength="30"
+                                >
+                                <label for="employerName">Employer Name</label>
+                            </div>
+                            <div class="col-lg-2 form-floating mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="supervisorName"
+                                    name="supervisorName"
+                                    placeholder="Jimmy"
+                                    minlength="2"
+                                    maxlength="30"
+                                >
+                                <label for="supervisorName">Supervisor Name</label>
+                            </div>
+                            <div class="col-lg-2 form-floating mb-3">
+                                <input
+                                    type="tel"
+                                    class="form-control"
+                                    id="experiencePhoneNumber"
+                                    name="experiencePhoneNumber"
+                                    placeholder="1231231234"
+                                >
+                                <label for="experiencePhoneNumber">Phone Number</label>
+                            </div>
+                            <div class="col-lg-2 form-floating mb-3">
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="experienceTitle"
+                                    name="experienceTitle"
+                                    placeholder="Scientist"
+                                    minlength="2"
+                                    maxlength="30"
+                                >
+                                <label for="experienceTitle">Last Job Title</label>
+                            </div>
+                            <div class="col-lg-2 form-floating mb-3">
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="experienceStartDate"
+                                    name="experienceStartDate"
+                                    placeholder="4/20/2020"
+                                >
+                                <label for="experienceStartDate">Employment Start</label>
+                            </div>
+                            <div class="col-lg-2 form-floating mb-3">
+                                <input
+                                    type="date"
+                                    class="form-control"
+                                    id="experienceEndDate"
+                                    name="experienceEndDate"
+                                    placeholder="4/20/2021"
+                                >
+                                <label for="experienceEndDate">Employment End</label>
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col form-floating mb-3">
+                                <textarea
+                                    class="form-control"
+                                    id="experienceDescription"
+                                    name="experienceDescription"
+                                    placeholder="Experience Description"
+                                ></textarea>
+                                <label for="experienceDescription">List duties performed, skills used, etc.</label>
+                            </div>
+                        </div>
+                        <div class="row g-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="experienceContactAgreement" name="experienceContactAgreement">
+                                <label class="form-check-label" for="experienceContactAgreement">
+                                  May we contact this employer?
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-success mb-3" onclick="addWorkExperienceGroup()">Add Additional Work Experience</button>
             </section>
             <!-- Acknowledgement -->
             <section id="Acknowledgement">
@@ -352,7 +444,7 @@
                     <label class="form-check-label" for="agreedToAcknowledgement">
                       By checking this you agree that you've read and accept the terms from the "Application Acknowledgement and Waiver" above
                     </label>
-                  </div>
+                </div>
             </section>
             <div class="d-grid gap-2">
                 <button type="reset" class="btn btn-secondary">Clear Form</button>
