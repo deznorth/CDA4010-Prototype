@@ -10,6 +10,10 @@ function handleSubmit() {
   // Object containing all form data keyed by their "name" property
   const formData = Object.fromEntries(new FormData(form));
   console.log(formData);
+
+  // Display formData on a pre element under the form
+  const submissionContentContainer = document.getElementById('SubmissionContent');
+  submissionContentContainer.textContent = JSON.stringify(formData, null, 2);
 }
 
 function addEmailField() {
