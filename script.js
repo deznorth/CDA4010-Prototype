@@ -2,6 +2,7 @@
 let emailFieldsCount = 1;
 let phoneFieldsCount = 1;
 let educationGroupsCount = 1;
+let referenceGroupsCount = 1;
 
 function handleSubmit() {
   const form = document.getElementById('Form');
@@ -83,7 +84,7 @@ function addEducationGroup() {
 
   // Create the group's row
   const row = document.createElement('div');
-  row.className = 'row g-2 mb-3';
+  row.className = 'row g-2 mb-4';
 
   // Create the columns
   const educationLevelColumn = document.createElement('div');
@@ -213,5 +214,147 @@ function addEducationGroup() {
 
   // Append the row to the container
   const educationContainer = document.getElementById('EducationContainer');
+  educationContainer.appendChild(row);
+}
+
+function addReferenceGroup() {
+  referenceGroupsCount++;
+
+  // Declare Input Names
+  const referenceFirstNameName = `referenceFirstName${referenceGroupsCount}`;
+  const referenceLastNameName = `referenceLastName${referenceGroupsCount}`;
+  const phoneNumberName = `phoneNumber${referenceGroupsCount}`;
+  const emailName = `email${referenceGroupsCount}`;
+  const referenceRelationshipName = `referenceRelationship${referenceGroupsCount}`;
+  const referenceTitleName = `referenceTitle${referenceGroupsCount}`;
+
+  // Create the group's row
+  const row = document.createElement('div');
+  row.className = 'row g-2 mb-4';
+
+  // Create the columns
+  const referenceFirstNameColumn = document.createElement('div');
+  referenceFirstNameColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const referenceLastNameColumn = document.createElement('div');
+  referenceLastNameColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const phoneNumberColumn = document.createElement('div');
+  phoneNumberColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const emailColumn = document.createElement('div');
+  emailColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const referenceRelationshipColumn = document.createElement('div');
+  referenceRelationshipColumn.className = 'col-lg-2 form-floating mb-3';
+
+  const referenceTitleColumn = document.createElement('div');
+  referenceTitleColumn.className = 'col-lg-2 form-floating mb-3';
+
+  // Create the inputs
+  const referenceFirstNameInput = document.createElement('input');
+  referenceFirstNameInput.type = 'text';
+  referenceFirstNameInput.name = referenceFirstNameName;
+  referenceFirstNameInput.id = referenceFirstNameName;
+  referenceFirstNameInput.placeholder = 'John';
+  referenceFirstNameInput.className = 'form-control';
+  referenceFirstNameInput.minLength = 2;
+  referenceFirstNameInput.maxLength = 30;
+
+  const referenceLastNameInput = document.createElement('input');
+  referenceLastNameInput.type = 'text';
+  referenceLastNameInput.name = referenceLastNameName;
+  referenceLastNameInput.id = referenceLastNameName;
+  referenceLastNameInput.placeholder = 'Doe';
+  referenceLastNameInput.className = 'form-control';
+  referenceLastNameInput.minLength = 2;
+  referenceLastNameInput.maxLength = 30;
+
+  const phoneNumberInput = document.createElement('input');
+  phoneNumberInput.type = 'tel';
+  phoneNumberInput.name = phoneNumberName;
+  phoneNumberInput.id = phoneNumberName;
+  phoneNumberInput.placeholder = '1231231234';
+  phoneNumberInput.className = 'form-control';
+
+  const emailInput = document.createElement('input');
+  emailInput.type = 'email';
+  emailInput.name = emailName;
+  emailInput.id = emailName;
+  emailInput.placeholder = 'johndoe@gmail.com';
+  emailInput.className = 'form-control';
+
+  const referenceRelationshipInput = document.createElement('input');
+  referenceRelationshipInput.type = 'text';
+  referenceRelationshipInput.name = referenceRelationshipName;
+  referenceRelationshipInput.id = referenceRelationshipName;
+  referenceRelationshipInput.placeholder = 'friend';
+  referenceRelationshipInput.className = 'form-control';
+  referenceRelationshipInput.minLength = 2;
+  referenceRelationshipInput.maxLength = 30;
+
+  const referenceTitleInput = document.createElement('input');
+  referenceTitleInput.type = 'text';
+  referenceTitleInput.name = referenceTitleName;
+  referenceTitleInput.id = referenceTitleName;
+  referenceTitleInput.placeholder = 'Manager';
+  referenceTitleInput.className = 'form-control';
+  referenceTitleInput.minLength = 2;
+  referenceTitleInput.maxLength = 30;
+
+  // Create the labels
+  const referenceFirstNameLabel = document.createElement('label');
+  referenceFirstNameLabel.htmlFor = referenceFirstNameName;
+  referenceFirstNameLabel.textContent = `First Name ${referenceGroupsCount}`;
+
+  const referenceLastNameLabel = document.createElement('label');
+  referenceLastNameLabel.htmlFor = referenceLastNameName;
+  referenceLastNameLabel.textContent = `Last Name ${referenceGroupsCount}`;
+
+  const phoneNumberLabel = document.createElement('label');
+  phoneNumberLabel.htmlFor = phoneNumberName;
+  phoneNumberLabel.textContent = `Phone Number ${referenceGroupsCount}`;
+
+  const emailLabel = document.createElement('label');
+  emailLabel.htmlFor = emailName;
+  emailLabel.textContent = `Email Address ${referenceGroupsCount}`;
+
+  const referenceRelationshipLabel = document.createElement('label');
+  referenceRelationshipLabel.htmlFor = referenceRelationshipName;
+  referenceRelationshipLabel.textContent = `Relationship ${referenceGroupsCount}`;
+
+  const referenceTitleLabel = document.createElement('label');
+  referenceTitleLabel.htmlFor = referenceTitleName;
+  referenceTitleLabel.textContent = `Title ${referenceGroupsCount}`;
+
+  // Append the inputs and labels to columns
+  referenceFirstNameColumn.appendChild(referenceFirstNameInput);
+  referenceFirstNameColumn.appendChild(referenceFirstNameLabel);
+
+  referenceLastNameColumn.appendChild(referenceLastNameInput);
+  referenceLastNameColumn.appendChild(referenceLastNameLabel);
+
+  phoneNumberColumn.appendChild(phoneNumberInput);
+  phoneNumberColumn.appendChild(phoneNumberLabel);
+
+  referenceRelationshipColumn.appendChild(referenceRelationshipInput);
+  referenceRelationshipColumn.appendChild(referenceRelationshipLabel);
+
+  emailColumn.appendChild(emailInput);
+  emailColumn.appendChild(emailLabel);
+
+  referenceTitleColumn.appendChild(referenceTitleInput);
+  referenceTitleColumn.appendChild(referenceTitleLabel);
+
+  // Append the columns to the row
+  row.appendChild(referenceFirstNameColumn);
+  row.appendChild(referenceLastNameColumn);
+  row.appendChild(phoneNumberColumn);
+  row.appendChild(emailColumn);
+  row.appendChild(referenceRelationshipColumn);
+  row.appendChild(referenceTitleColumn);
+
+  // Append the row to the container
+  const educationContainer = document.getElementById('ReferencesContainer');
   educationContainer.appendChild(row);
 }
